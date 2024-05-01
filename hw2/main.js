@@ -175,7 +175,7 @@ if (day > 0 && day <= 10) {
     console.log('?????');
 }
 // - Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день (можна замість плану на день, назву дня англійською).
-const aDay = prompt('Enter day ?')
+const aDay = +prompt('Enter day ?')
 switch (aDay) {
     case 1 :
         console.log('Monday');
@@ -183,7 +183,6 @@ switch (aDay) {
     case 2:
         console.log('Tuesday');
         break;
-
     case 3:
         console.log('Wednesday');
         break;
@@ -200,7 +199,7 @@ switch (aDay) {
         console.log('Sunday');
         break;
     default:
-        console.error('Invadid aDay');
+        console.error('Invalid aDay');
 
 }
 //     - Користувач вводить або має два числа.
