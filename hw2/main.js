@@ -36,7 +36,7 @@ console.log(obj1)
 console.log(obj2)
 console.log(obj3)
 // - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" - являється  масивом. Кожен автор має поля name та age.
-let obj4 = {
+const obj4 = {
     title: 'harqwqaaadeqwer',
     pageCount: 17288,
     genre: 'faasd33asd',
@@ -45,7 +45,7 @@ let obj4 = {
     ]
 };
 console.log(obj4)
-let obj5 = {
+const obj5 = {
     title: "Harryn Pontter",
     pageCount: 5555555,
     genre: "Fantasy",
@@ -55,7 +55,7 @@ let obj5 = {
 
 }
 console.log(obj5)
-let obj6 = {
+const obj6 = {
     title: "Harrysh Pottersh",
     pageCount: 5511155,
     genre: "Fantasy",
@@ -65,7 +65,7 @@ let obj6 = {
 }
 console.log(obj6)
 // - Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
-let users = [
+const users = [
     {name: 'John Doe', username: 'john_doe123', password: 'password123'},
     {name: 'Jane Smith', username: 'jane_smith456', password: 'securepass'},
     {name: 'Alice Johnson', username: 'alice123', password: 'alicepass'},
@@ -144,7 +144,7 @@ console.log(temperature)
 // Логічні розгалуження:
 //     - Є змінна х, якій ви надаєте довільне числове значення.
 //     Якщо змінна x не дорівнює нулю, виведіть 'Вірно', інакше виведіть 'Невірно'. Перевірте  скрипт при a, що дорівнює 1, 0, -3
-let x = 0
+const x = 0
 if (x !== 0) {
     console.log('Вірно')
 } else {
@@ -153,7 +153,7 @@ if (x !== 0) {
 console.log(x)
 // - Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години попадає число
 // (в першу, другу, третю или четверту частину години).
-let time = 15
+const time = 15
 if (time > 45 && time <= 59) {
     console.log('time:4/4')
 } else if (time > 30 && time <= 45) {
@@ -164,7 +164,7 @@ if (time > 45 && time <= 59) {
     console.log('time:1/4')
 }
 // - У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).
-let day = 11;
+const day = 11;
 if (day > 0 && day <= 10) {
     console.log('1 decade');
 } else if (day > 10 && day <= 20) {
@@ -175,7 +175,7 @@ if (day > 0 && day <= 10) {
     console.log('?????');
 }
 // - Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день (можна замість плану на день, назву дня англійською).
-let aDay = prompt('Enter day ?')
+const aDay = prompt('Enter day ?')
 switch (aDay) {
     case 1 :
         console.log('Monday');
@@ -206,8 +206,8 @@ switch (aDay) {
 //     - Користувач вводить або має два числа.
 //         Потрібно знайти та вивести максимальне число з тих двох .
 //         Також потрібно врахувати коли введені рівні числа.
-let y = 30
-let z = 30
+const y = 30
+const z = 30
 if (y > z) {
     console.log('y: ', y);
 } else if (z > y) {
