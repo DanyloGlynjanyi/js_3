@@ -52,3 +52,4 @@ const age = +prompt("Enter your age:");
 console.log("Name:", firstName1);
 console.log("Middle name:", middleName1);
 console.log("age:", age);
+
