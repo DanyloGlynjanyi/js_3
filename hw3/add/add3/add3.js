@@ -330,3 +330,4 @@ for (let i = 0; i < largestBook.authors.length; i++) {
     const largestBookElement = largestBook.authors[i];
     console.log(largestBookElement);
 }
+та
