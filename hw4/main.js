@@ -29,8 +29,8 @@ function arrLog(arr) {
     }
 }
 
-console.log(arrLog([1233, true, "string"]))
-console.log(arrLog([false, null]))
+arrLog([1233, true, "aaaa"])
+arrLog([false, 33])
 
 // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
 function creatorP(someText) {
