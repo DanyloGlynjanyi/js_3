@@ -149,7 +149,6 @@ const cards = [
 ]
 
 
-
 // - знайти піковий туз
 const findedAce = cards.find((card) => card.value === 'ace' && card.cardSuit === 'spade')
 
@@ -185,7 +184,7 @@ const cards1 = [];
 for (const cardSuit of cardSuits) {
     for (const value of values) {
         const color = (cardSuit === 'spade' || cardSuit === 'clubs') ? 'black' : 'red';
-        cards1.push({ cardSuit, value, color });
+        cards1.push({cardSuit, value, color});
     }
 }
 
@@ -195,7 +194,7 @@ console.log(cards1);
 const cards2 = cards1.reduce((acc, cur) => {
     acc[cur.cardSuit].push(cur);
     return acc;
-}, { spade: [], clubs: [], heart: [], diamond: [] });
+}, {spade: [], clubs: [], heart: [], diamond: []});
 
 console.log(cards2);
 // {
@@ -276,8 +275,8 @@ let coursesArray = [
 ];
 //     взяти з arrays.js (який лежить в папці 2023 plan) масив coursesArray
 // --написати пошук всіх об'єктів, в який в modules є sass
-const filteredSass=coursesArray.filter((modSas)=>modSas.modules.includes('sass') )
+const filteredSass = coursesArray.filter((modSas) => modSas.modules.includes('sass'))
 console.log(filteredSass)
 // --написати пошук всіх об'єктів, в який в modules є docker
-const filteredDock=coursesArray.filter((modDo)=>modDo.modules.includes('docker') )
+const filteredDock = coursesArray.filter((modDo) => modDo.modules.includes('docker'))
 console.log(filteredDock)
