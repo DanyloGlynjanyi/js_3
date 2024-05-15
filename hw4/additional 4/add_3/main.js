@@ -1,7 +1,7 @@
 // --створити масив з:
 //     - з 5 числових значень
 
-function createNumericArray() {
+const createNumericArray = () => {
     let array = [];
     for (let i = 0; i < 5; i++) {
         array.push(Math.floor(Math.random() * 100) + 1);
@@ -12,7 +12,7 @@ function createNumericArray() {
 console.log(createNumericArray())
 
 // - з 5 стічкових значень
-function createStringArray() {
+const createStringArray = () => {
     let stringArray = [];
     for (let i = 0; i < 5; i++) {
         stringArray.push("string" + i);
@@ -24,7 +24,7 @@ console.log(createStringArray());
 
 // - з 5 значень стрічкового, числового та булевого типу
 // - та вивести його в консоль
-function createMixedArray(...args) {
+const createMixedArray = (...args) => {
     return args
 }
 
@@ -32,7 +32,7 @@ console.log(createMixedArray(1, 2, true, "cars", false));
 
 // -- Створити пустий масив. Наповнити його будь-якими значеннями звертаючись до конкретного індексу. Вивести в консоль
 //
-function fillArray() {
+const fillArray = () => {
     let array = [];
     for (let i = 0; i < arguments.length; i++) {
         array[i] = arguments[i];
@@ -42,12 +42,12 @@ function fillArray() {
 
 console.log(fillArray(`value`, true, false, "papa", 11, 3, Symbol(1), 1, false, 4));
 
-// function fillArray(value1, value2, value3, value4, value5, value6, value7, value8, value9, value10) {
-//     let array = [value1, value2, value3, value4, value5, value6, value7, value8, value9, value10];
-//     return array;
-// }
-//
-// console.log(fillArray("value", true, false, "papa", 11, 3, Symbol(1), 1, false, 4));
+const fillArray = (value1, value2, value3, value4, value5, value6, value7, value8, value9, value10) => {
+    let array = [value1, value2, value3, value4, value5, value6, value7, value8, value9, value10];
+    return array;
+}
+
+console.log(fillArray("value", true, false, "papa", 11, 3, Symbol(1), 1, false, 4));
 
 //
 //
@@ -58,7 +58,7 @@ let numberArr = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18]
 //// 1. перебрати його циклом while
 console.log("----------------1------------------")
 
-function callNumArr(numberArr) {
+const callNumArr = (numberArr) => {
     let y = 0
     while (y < numberArr.length) {
         console.log(numberArr[y])
@@ -70,35 +70,47 @@ callNumArr(numberArr)
 
 //     2. перебрати його циклом for
 console.log("------------------2----------------")
-function callNumArr2(numberArr){
-for (let i = 0; i < numberArr.length; i++) {
-    const numberArrElement = numberArr[i];
 
-    console.log(numberArrElement)
+const callNumArr2 = (numberArr) => {
+    for (let i = 0; i < numberArr.length; i++) {
+        const numberArrElement = numberArr[i];
 
-}}
+        console.log(numberArrElement)
+
+    }
+}
+
 callNumArr(numberArr)
 //     3. перебрати циклом while та вивести  числа тільки з непарним індексом
 console.log("-----------------3-----------------")
-function callNum(numberArr){let x = 1;
+
+const callNum = (numberArr) => жзж
+{
+    let x = 1;
     while (x < numberArr.length) {
         if (x % 2 !== 0) {
             console.log(numberArr[x]);
         }
         x++;
-    }}
+    }
+}
+
 callNum(numberArr)
 
 // 4. перебрати циклом for та вивести  числа тільки з непарним індексом
 console.log("----------------4-------------------")
-function callNumAr(numberArr){for (let i = 0; i < numberArr.length; i++) {
-    if (i % 2 !== 0) {
-        console.log(numberArr[i]);
+
+const callNumAr = (numberArr) => {
+    for (let i = 0; i < numberArr.length; i++) {
+        if (i % 2 !== 0) {
+            console.log(numberArr[i]);
+        }
     }
-}}
+}
 
 callNumArr(numberArr)
-function callNum1(numberArr, check) {
+
+const callNum1 = (numberArr, check) => {
     for (let i = 0; i < numberArr.length; i++) {
         if ((check && i % 2 !== 0) || (!check && i % 2 === 0)) {
             console.log(numberArr[i]);
