@@ -123,7 +123,7 @@ const cards = [
     {cardSuit: 'clubs', value: '7', color: 'black'},
     {cardSuit: 'clubs', value: '8', color: 'black'},
     {cardSuit: 'clubs', value: '9', color: 'black'},
-    {cardSuit: 'сlubs', value: 'ace', color: 'black'},
+    {cardSuit: 'clubs', value: 'ace', color: 'black'},
     {cardSuit: 'clubs', value: '10', color: 'black'},
     {cardSuit: 'clubs', value: 'jack', color: 'black'},
     {cardSuit: 'clubs', value: 'queen', color: 'black'},
@@ -279,5 +279,5 @@ let coursesArray = [
 const filteredSass=coursesArray.filter((modSas)=>modSas.modules.includes('sass') )
 console.log(filteredSass)
 // --написати пошук всіх об'єктів, в який в modules є docker
-const filteredDock=coursesArray.filter((modDo)=>modDo.modules.includes('sass') )
+const filteredDock=coursesArray.filter((modDo)=>modDo.modules.includes('docker') )
 console.log(filteredDock)
