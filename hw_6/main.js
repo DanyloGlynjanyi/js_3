@@ -96,20 +96,19 @@ let coursesAndDurationArray = [
 const sortedArr = coursesAndDurationArray.sort((a, b) => b.monthDuration - a.monthDuration)
 console.log(sortedArr)
 // -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
-const mapArr = coursesAndDurationArray.map((value, index) => {
+const filteredArr = coursesAndDurationArray.filter(value => value.monthDuration > 5)
+console.log(filteredArr)
+// -- за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
+const mapArr1 = coursesAndDurationArray.map((value, index) => {
     return {
         id: index + 1,
         title: value.title,
         monthDuration: value.monthDuration,
     }
 });
-console.log(mapArr);
-// -- за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
-
+console.log(mapArr1);
 // =========================
 //     описати колоду карт (від 6 до туза без джокерів)
-
-
 const cards = [
     {cardSuit: 'spade', value: '6', color: 'black'},
     {cardSuit: 'spade', value: '7', color: 'black'},
@@ -149,42 +148,35 @@ const cards = [
     {cardSuit: 'diamond', value: 'king', color: 'red'},
 ]
 
-// - знайти піковий туз
 
+
+// - знайти піковий туз
 const findedAce = cards.find((card) => card.value === 'ace' && card.cardSuit === 'spade')
 
 console.log(findedAce)
-
 // - всі шістки
-
 const filteredSix = cards.filter((card) => card.value === '6')
 
 console.log(filteredSix)
-
 // - всі червоні карти
-
 const filteredRedCard = cards.filter((card) => card.color === 'red')
 
 console.log(filteredRedCard)
 
 // - всі буби
-
 const filteredAllDiamond = cards.filter((card) => card.cardSuit === 'diamond')
 
 console.log(filteredAllDiamond)
 // - всі трефи від 9 та більше
-
 const filteredclubs = cards.filter((card) => card.cardSuit === 'clubs' && ['9', '10', 'ace', 'jack', 'queen', 'king'].includes(card.value));
 
 console.log(filteredclubs);
-//=========================
+//
 // {
 //     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
 //         value: '', // '6'-'10', 'ace','jack','queen','king','joker'
 //     color:'', // 'red','black'
 // }
-//
-// =========================
 //
 const cardSuits = ['spade', 'diamond', 'heart', 'clubs'];
 const values = ['6', '7', '8', '9', '10', 'ace', 'jack', 'queen', 'king', 'joker'];
@@ -199,20 +191,13 @@ for (const cardSuit of cardSuits) {
 
 console.log(cards1);
 
-
-
 //     Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
-
-
-
-const cards2 = cards.reduce((acc, cur) => {
+const cards2 = cards1.reduce((acc, cur) => {
     acc[cur.cardSuit].push(cur);
     return acc;
 }, { spade: [], clubs: [], heart: [], diamond: [] });
-console.log(cards2)
 
-
-
+console.log(cards2);
 // {
 //     spades:[],
 //         diamonds:[],
@@ -220,7 +205,6 @@ console.log(cards2)
 //     clubs:[]
 // }
 // =========================
-//     взяти з arrays.js (який лежить в папці 2023 plan) масив coursesArray
 let coursesArray = [
     {
         title: 'JavaScript Complex',
@@ -290,10 +274,10 @@ let coursesArray = [
         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
     }
 ];
+//     взяти з arrays.js (який лежить в папці 2023 plan) масив coursesArray
 // --написати пошук всіх об'єктів, в який в modules є sass
 const filteredSass=coursesArray.filter((modSas)=>modSas.modules.includes('sass') )
 console.log(filteredSass)
-
 // --написати пошук всіх об'єктів, в який в modules є docker
 const filteredDock=coursesArray.filter((modDo)=>modDo.modules.includes('sass') )
 console.log(filteredDock)
