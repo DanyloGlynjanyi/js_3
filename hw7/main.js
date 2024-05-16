@@ -274,17 +274,18 @@ class Driver2 {
 const driver2 = new Driver2('Danylo', 2001);
 car2.addDriver(driver2);
 car2.info();
-// -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
-// Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+
 //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+// -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
+
 class Human {
     constructor(name, age) {
         this.name = name;
         this.age = age;
     }
 }
-
+// Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 class Popelushka extends Human {
     constructor(name, age, footSize) {
         super(name, age);
@@ -327,3 +328,48 @@ const prince = new Prince('Mommy', 30, 40);
 console.log(prince.findedPrincess1(popelArr));
 console.log('_______INFO_______');
 console.log(prince.findedPrincess2(popelArr));
+
+// Через Array.prototype. створити власний foreach, filter, map
+
+//створити власний foreach
+Array.prototype.myForEach = function(callback) {
+    for (let item of this) {
+        callback(item);
+    }
+};
+
+const arrForEa = [1, 2, 3, 4, 5];
+arrForEa.myForEach(item => {
+    console.log(item);
+});
+
+
+//створити власний filter
+Array.prototype.myFilter = function(callback) {
+    const result = [];
+    for (let item of this) {
+        if (callback(item)) {
+            result.push(item);
+        }
+    }
+    return result;
+};
+
+
+const arrFiltered = [1, 2, 3, 4, 5];
+const filteredArr = arrFiltered.myFilter(item => item % 2 === 0);
+console.log(filteredArr);
+
+//створити власний map
+Array.prototype.myMap = function(callback) {
+    const result = [];
+    for (let item of this) {
+        result.push(callback(item));
+    }
+    return result;
+};
+
+
+const arrMap = [1, 2, 3, 4, 5];
+const mappedArr = arrMap.myMap(item => item * 2);
+console.log(mappedArr);
