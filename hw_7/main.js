@@ -127,6 +127,7 @@ console.log(arrayClient);
 // });
 //
 // console.log(arrayClient);
+
 // function Client(id, name, surname, email, phone, order) {
 //     User.call(this, id, name, surname, email, phone)
 //     this.order = order;
